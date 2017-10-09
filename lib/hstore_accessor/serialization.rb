@@ -32,7 +32,7 @@ module HstoreAccessor
       array: -> value { (value && value.split(SEPARATOR)) || nil },
       boolean: -> value { TypeHelpers.cast(:boolean, value) },
       date: -> value { value && Date.parse(value) },
-      decimal: -> value { value && BigDecimal.new(value) },
+      decimal: -> value { value && (value == '' ? BigDecimal.new(0) : BigDecimal.new(value)) },
       float: -> value { value && value.to_f },
       hash: -> value { (value && JSON.parse(value)) || nil },
       integer: -> value { value && value.to_i },
