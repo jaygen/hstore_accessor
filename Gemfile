@@ -3,5 +3,5 @@ source "https://rubygems.org"
 gemspec
 
 group :test do
-  gem "pg", ">= 0.14.1"
+  gem "pg", "< 1.0.0"
 end

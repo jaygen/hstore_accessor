@@ -26,10 +26,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry"
   spec.add_development_dependency "pry-doc"
   spec.add_development_dependency "pry-nav"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "= 10.5.0"
   spec.add_development_dependency "rspec", "~> 3.1.0"
   spec.add_development_dependency "rubocop"
-  spec.add_development_dependency "shoulda-matchers"
+  spec.add_development_dependency "shoulda-matchers", "< 3.0.0"
 
   spec.post_install_message = "Please note that the `array` and `hash` types will no longer be supported in version 1.0.0"
 end
